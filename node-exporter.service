@@ -4,9 +4,10 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-User=prometheus
+User=exporter
 Type=simple
-ExecStart=/var/lib/prometheus/node_exporter
+EnvironmentFile=/etc/sysconfig/node_exporter
+ExecStart=/var/lib/prometheus/node_exporter $OPTIONS
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
