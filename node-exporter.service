@@ -8,7 +8,7 @@ After=network-online.target
 [Service]
 User=prometheus
 Type=simple
-ExecStart=/var/lib/prometheus/node_exporter/node_exporter
+ExecStart=/var/lib/prometheus/node_exporter
 
 [Install]
 WantedBy=default.target
