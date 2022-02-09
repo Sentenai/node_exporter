@@ -4,10 +4,10 @@ Wants=network-online.target
 Wants=prometheus
 After=prometheus
 After=network-online.target
-Type=simple
 
 [Service]
 User=prometheus
+Type=simple
 ExecStart=/var/lib/prometheus/node_exporter/node_exporter
 
 [Install]
