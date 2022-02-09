@@ -1,8 +1,6 @@
 [Unit]
 Description=Node Prometheus Exporter
 Wants=network-online.target
-Wants=prometheus
-After=prometheus
 After=network-online.target
 
 [Service]
