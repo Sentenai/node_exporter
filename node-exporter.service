@@ -1,10 +1,10 @@
 [Unit]
 Description=Node Prometheus Exporter
 Wants=network-online.target
-After=network-online.target
 
 [Service]
 User=exporter
+Group=exporter
 Type=simple
 EnvironmentFile=/etc/sysconfig/node_exporter
 ExecStart=/var/lib/prometheus/node_exporter $OPTIONS
